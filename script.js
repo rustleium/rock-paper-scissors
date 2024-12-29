@@ -54,4 +54,12 @@ function playGame() {
 for(let i = 1; i <= 5; i++) {
   playGame();
 }
+console.log(`FINAL SCORE - Your Score: ${humanScore} | Computer Score: ${computerScore}`)
 
+if(humanScore > computerScore) {
+  console.log(`You Won!`);
+} else if (humanScore === computerScore) {
+  console.log(`Game Tied.`)
+} else {
+  console.log(`Computer Won`)
+}
