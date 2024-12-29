@@ -20,7 +20,12 @@ function getComputerChoice() {
 
 function getHumanChoice() {
   let humanChoice;
-  humanChoice = prompt("Type 1 of the 3 choices - Rock, Paper, or Scissors ").toLowerCase();
+
+  humanChoice = prompt("Type one of these - rock, paper, or scissors");
+  while(humanChoice !== "rock" && humanChoice !== "paper" && humanChoice !== "scissors"){
+    humanChoice = prompt("Invalid input. Type one of these - rock, paper, or scissors");
+  }
+
   return humanChoice;
 }
 
@@ -53,6 +58,7 @@ function playGame() {
 
 for(let i = 1; i <= 5; i++) {
   playGame();
+  console.log("=================================")
 }
 console.log(`FINAL SCORE - Your Score: ${humanScore} | Computer Score: ${computerScore}`)
 
