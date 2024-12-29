@@ -16,7 +16,7 @@ function getComputerChoice() {
 
 }
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
 
 function getHumanChoice() {
   let humanChoice;
@@ -24,4 +24,4 @@ function getHumanChoice() {
   return humanChoice;
 }
 
-console.log(getHumanChoice())
+// console.log(getHumanChoice())
