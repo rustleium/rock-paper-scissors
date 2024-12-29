@@ -20,7 +20,7 @@ function getComputerChoice() {
 
 function getHumanChoice() {
   let humanChoice;
-  humanChoice = prompt("Type 1 of the 3 choices - Rock, Paper, or Scissors ");
+  humanChoice = prompt("Type 1 of the 3 choices - Rock, Paper, or Scissors ").toLowerCase();
   return humanChoice;
 }
 
