@@ -5,11 +5,11 @@ function getComputerChoice() {
   let randomNumber = Math.random();
   let computerChoice;
   if (randomNumber < 1 / 3 && randomNumber >= 0) {
-    computerChoice = "Rock";
+    computerChoice = "rock";
   } else if (randomNumber < 2 / 3 && randomNumber >= 1 / 3) {
-    computerChoice = "Paper";
+    computerChoice = "paper";
   } else if (randomNumber < 1 && randomNumber >= 2 / 3) {
-    computerChoice = "Scissors";
+    computerChoice = "scissors";
   }
 
   return computerChoice;
@@ -27,5 +27,5 @@ function getHumanChoice() {
 // console.log(getHumanChoice())
 
 function playRound(humanChoice, computerChoice) {
-  
+
 }
