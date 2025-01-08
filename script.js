@@ -2,13 +2,13 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice() {
-  let randomNumber = Math.random();
+  let randomNumber = Math.ceil(Math.random() * 3);
   let computerChoice;
-  if (randomNumber < 1 / 3 && randomNumber >= 0) {
+  if (randomNumber === 1) {
     computerChoice = "rock";
-  } else if (randomNumber < 2 / 3 && randomNumber >= 1 / 3) {
+  } else if (randomNumber === 2) {
     computerChoice = "paper";
-  } else if (randomNumber < 1 && randomNumber >= 2 / 3) {
+  } else if (randomNumber === 3) {
     computerChoice = "scissors";
   }
 
