@@ -31,6 +31,21 @@ function getHumanChoice() {
 
 // console.log(getHumanChoice())
 
+function determineWinner(humanChoice, computerChoice) {
+
+  if(humanChoice === computerChoice) return "tie";
+
+  if(
+    humanChoice === 'paper' && computerChoice === 'rock' ||
+    humanChoice === 'rock' && computerChoice === 'scissors' ||
+    humanChoice === 'scissors' && computerChoice === 'paper'
+  ) {
+    return 'human';
+  } else {
+    return 'computer';
+  }
+}
+
 function playRound(humanChoice, computerChoice) {
 
   if(humanChoice === computerChoice) {
