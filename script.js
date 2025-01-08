@@ -57,16 +57,17 @@ function playGame() {
     playRound(getHumanChoice(), getComputerChoice());  
     console.log("=================================")
   }
+  
+  console.log(`FINAL SCORE - Your Score: ${humanScore} | Computer Score: ${computerScore}`)
+  
+  if(humanScore > computerScore) {
+    console.log(`You Won!`);
+  } else if (humanScore === computerScore) {
+    console.log(`Game Tied.`)
+  } else {
+    console.log(`Computer Won`)
+  }
 }
 
 playGame();
 
-console.log(`FINAL SCORE - Your Score: ${humanScore} | Computer Score: ${computerScore}`)
-
-if(humanScore > computerScore) {
-  console.log(`You Won!`);
-} else if (humanScore === computerScore) {
-  console.log(`Game Tied.`)
-} else {
-  console.log(`Computer Won`)
-}
