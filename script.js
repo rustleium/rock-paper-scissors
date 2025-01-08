@@ -48,13 +48,11 @@ function determineWinner(humanChoice, computerChoice) {
 
 function playRound(humanChoice, computerChoice) {
 
-  if(humanChoice === computerChoice) {
+  const result = determineWinner(humanChoice, computerChoice);
+
+  if(result === 'tie') {
     console.log(`You both picked ${computerChoice}. It's a Tie!`);
-  } else if (
-    (humanChoice === "rock" && computerChoice === "scissors") ||
-    (humanChoice === "paper" && computerChoice === "rock") ||
-    (humanChoice === "scissors" && computerChoice === "paper")
-  ) {
+  } else if (result === "human") {
     humanScore += 1;
     console.log(`You picked ${humanChoice}. Computer picked ${computerChoice}. You win.`);
     
