@@ -52,15 +52,15 @@ function playRound(humanChoice, computerChoice) {
 
 function playGame() {
   
-  playRound(getHumanChoice(), getComputerChoice());
-
+  for(let i = 1; i <= 5; i++) {
+    console.log(`Round ${i}`);
+    playRound(getHumanChoice(), getComputerChoice());  
+    console.log("=================================")
+  }
 }
 
-for(let i = 1; i <= 5; i++) {
-  console.log(`Round ${i}`);
-  playGame();
-  console.log("=================================")
-}
+playGame();
+
 console.log(`FINAL SCORE - Your Score: ${humanScore} | Computer Score: ${computerScore}`)
 
 if(humanScore > computerScore) {
