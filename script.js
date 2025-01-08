@@ -19,9 +19,9 @@ function getComputerChoice() {
 function getHumanChoice() {
   let humanChoice;
   
-  humanChoice = prompt("Type one of these - rock, paper, or scissors");
+  humanChoice = prompt("Type one of these - rock, paper, or scissors").toLowerCase();
   while(humanChoice !== "rock" && humanChoice !== "paper" && humanChoice !== "scissors"){
-    humanChoice = prompt("Invalid input. Type one of these - rock, paper, or scissors");
+    humanChoice = prompt("Invalid input. Type one of these - rock, paper, or scissors").toLowerCase();
   }
   
   return humanChoice;
