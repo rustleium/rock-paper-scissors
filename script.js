@@ -83,5 +83,9 @@ function playGame() {
   }
 }
 
-playGame();
+if(confirm("Shall we start?")){
+  playGame();
+} else{
+  alert("You cancelled the game")
+}
 
