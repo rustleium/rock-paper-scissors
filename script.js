@@ -1,3 +1,5 @@
+let humanScore = 0;
+let computerScore = 0;
 
 function getComputerChoice() {
   let randomNumber = Math.ceil(Math.random() * 3);
@@ -44,7 +46,7 @@ function determineWinner(humanChoice, computerChoice) {
   }
 }
 
-function playRound(humanChoice, computerChoice, humanScore, computerScore) {
+function playRound(humanChoice, computerChoice) {
   
   const result = determineWinner(humanChoice, computerChoice);
   
@@ -62,36 +64,4 @@ function playRound(humanChoice, computerChoice, humanScore, computerScore) {
   return [humanScore, computerScore];
 }
 
-function playGame() {
-  let humanScore = 0;
-  let computerScore = 0;
-  
-  for(let i = 1; i <= 5; i++) {
-    console.log(`Round ${i}`);
-    [humanScore, computerScore] = playRound(getHumanChoice(), getComputerChoice(), humanScore, computerScore);  
-    console.log("=================================")
-  }
-  
-  console.log(`FINAL SCORE - Your Score: ${humanScore} | Computer Score: ${computerScore}`)
-  
-  if(humanScore > computerScore) {
-    console.log(`You Won!`);
-  } else if (humanScore === computerScore) {
-    console.log(`Game Tied.`)
-  } else {
-    console.log(`Computer Won`)
-  }
-}
 
-if(confirm("Shall we start?")){
-  playGame();
-} else{
-  alert("You cancelled the game")
-}
-
-// Ask user if they want to play again
-if (confirm("Do you want to play again?")) {
-  playGame();  // Restart the game
-} else {
-  alert("Thank you for playing!");  // End the game
-}
