@@ -89,3 +89,9 @@ if(confirm("Shall we start?")){
   alert("You cancelled the game")
 }
 
+// Ask user if they want to play again
+if (confirm("Do you want to play again?")) {
+  playGame();  // Restart the game
+} else {
+  alert("Thank you for playing!");  // End the game
+}
