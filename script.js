@@ -18,16 +18,6 @@ function getComputerChoice() {
 
 // console.log(getComputerChoice());
 
-function getHumanChoice() {
-  let humanChoice;
-  
-  humanChoice = prompt("Type one of these - rock, paper, or scissors").toLowerCase();
-  while(humanChoice !== "rock" && humanChoice !== "paper" && humanChoice !== "scissors"){
-    humanChoice = prompt("Invalid input. Type one of these - rock, paper, or scissors").toLowerCase();
-  }
-  
-  return humanChoice;
-}
 
 // console.log(getHumanChoice())
 
@@ -61,7 +51,6 @@ function playRound(humanChoice, computerChoice) {
     console.log(`You picked ${humanChoice}. Computer picked ${computerChoice}. Computer wins.`)
   }
   console.log(`Human Score: ${humanScore} | Computer Score: ${computerScore}`);
-  return [humanScore, computerScore];
 }
 
 const rockBtn = document.querySelector(".rock");
