@@ -44,7 +44,7 @@ function determineWinner(humanChoice, computerChoice) {
   }
 }
 
-function playRound(humanChoice, computerChoice) {
+function playRound(humanChoice, computerChoice, humanScore, computerScore) {
   
   const result = determineWinner(humanChoice, computerChoice);
   
@@ -59,6 +59,7 @@ function playRound(humanChoice, computerChoice) {
     console.log(`You picked ${humanChoice}. Computer picked ${computerChoice}. Computer wins.`)
   }
   console.log(`Human Score: ${humanScore} | Computer Score: ${computerScore}`);
+  return [humanScore, computerScore];
 }
 
 function playGame() {
@@ -67,7 +68,7 @@ function playGame() {
   
   for(let i = 1; i <= 5; i++) {
     console.log(`Round ${i}`);
-    playRound(getHumanChoice(), getComputerChoice());  
+    [humanScore, computerScore] = playRound(getHumanChoice(), getComputerChoice(), humanScore, computerScore);  
     console.log("=================================")
   }
   
