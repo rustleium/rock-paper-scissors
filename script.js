@@ -47,6 +47,7 @@ function resetGame(){
   roundNo = 0;
   score.textContent = `Human Score: ${humanScore} | Computer Score: ${computerScore}`;
   round.textContent = `Round ${roundNo}`;
+  gameWinner.textContent = '';
 }
 
 function playRound(humanChoice, computerChoice) {
