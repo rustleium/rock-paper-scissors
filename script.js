@@ -51,6 +51,7 @@ function resetGame(){
 
 function clearMessage(){
   gameWinner.textContent = "";
+  picks.textContent = "";
 }
 
 function playRound(humanChoice, computerChoice) {
