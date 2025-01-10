@@ -1,6 +1,7 @@
 let humanScore = 0;
 let computerScore = 0;
 let roundNo = 0;
+let gameCount = 0;
 
 function getComputerChoice() {
   let randomNumber = Math.ceil(Math.random() * 3);
@@ -54,6 +55,11 @@ function clearMessage(){
   picks.textContent = "";
 }
 
+function updateGameCount(){
+  gameCount ++;
+  gameNumber.textContent = `Completed Games: ${gameCount}`;
+}
+
 function playRound(humanChoice, computerChoice) {
   roundNo ++;
   round.textContent = `Round ${roundNo}`;
@@ -73,6 +79,7 @@ function playRound(humanChoice, computerChoice) {
 
   if(humanScore === 5 || computerScore === 5){
     declareGameWinner(humanScore === 5 ? "Human" : "Computer");
+    updateGameCount();
     setTimeout(resetGame, 2000);
     setTimeout(clearMessage, 2000);
   }
@@ -85,6 +92,7 @@ const score = document.querySelector(".score");
 const round = document.querySelector(".round");
 const picks = document.querySelector(".picks");
 const gameWinner = document.querySelector(".gameWinner");
+const gameNumber = document.querySelector(".gameNumber");
 
 rockBtn.addEventListener("click", () => {
   if(humanScore < 5 && computerScore < 5){
