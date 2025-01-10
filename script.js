@@ -41,14 +41,14 @@ function playRound(humanChoice, computerChoice) {
   const result = determineWinner(humanChoice, computerChoice);
   
   if(result === 'tie') {
-    console.log(`You both picked ${computerChoice}. It's a Tie!`);
+    picks.textContent = `You both picked ${computerChoice}. It's a Tie!`;
   } else if (result === "human") {
     humanScore += 1;
-    console.log(`You picked ${humanChoice}. Computer picked ${computerChoice}. You win.`);
+    picks.textContent = `You picked ${humanChoice}. Computer picked ${computerChoice}. You win.`;
     
   } else {
     computerScore += 1;
-    console.log(`You picked ${humanChoice}. Computer picked ${computerChoice}. Computer wins.`)
+    picks.textContent = `You picked ${humanChoice}. Computer picked ${computerChoice}. Computer wins.`;
   }
   console.log(`Human Score: ${humanScore} | Computer Score: ${computerScore}`);
 }
@@ -56,6 +56,9 @@ function playRound(humanChoice, computerChoice) {
 const rockBtn = document.querySelector(".rock");
 const paperBtn = document.querySelector(".paper");
 const scissorsBtn = document.querySelector(".scissors");
+const container = document.querySelector(".container");
+const liveScore = document.querySelector(".live-score");
+const picks = document.querySelector(".picks");
 
 rockBtn.addEventListener("click", () => playRound("rock", getComputerChoice()));
 paperBtn.addEventListener("click", () => playRound("paper", getComputerChoice()));
