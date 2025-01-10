@@ -12,6 +12,11 @@
       margin-top: 30px;
       text-align: center;
     }
+
+    .container{
+      display: flex;
+      justify-content: space-between;
+    }
   </style>
 </head>
 <body>
@@ -19,9 +24,15 @@
   <button class="paper">Paper</button>
   <button class="scissors">Scissors</button>
 
-  <div class="round"></div>
-  <div class="picks"></div>
-  <div class="score"></div>
+  <div class="container">
+    <div class="left">
+      <div class="round"></div>
+      <div class="picks"></div>
+      <div class="score"></div>
+    </div>
+    <div class="gameNumber"></div>
+  </div>
+
   <div class="gameWinner"></div>
 
   <script src="script.js"></script>
