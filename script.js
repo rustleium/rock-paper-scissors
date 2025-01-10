@@ -37,6 +37,18 @@ function determineWinner(humanChoice, computerChoice) {
   }
 }
 
+function declareGameWinner(winner) {
+  gameWinner.textContent = `${winner} wins the game! Starting a new game...`;
+}
+
+function resetGame(){
+  humanScore = 0;
+  computerScore = 0;
+  roundNo = 0;
+  score.textContent = `Human Score: ${humanScore} | Computer Score: ${computerScore}`;
+  round.textContent = `Round ${roundNo}`;
+}
+
 function playRound(humanChoice, computerChoice) {
   roundNo ++;
   round.textContent = `Round ${roundNo}`;
@@ -53,6 +65,11 @@ function playRound(humanChoice, computerChoice) {
     picks.textContent = `You picked ${humanChoice}. Computer picked ${computerChoice}. Computer wins.`;
   }
   score.textContent = `Human Score: ${humanScore} | Computer Score: ${computerScore}`;
+
+  if(humanScore === 5 || computerScore === 5){
+    declareGameWinner(humanScore === 5 ? "Human" : "Computer");
+    resetGame();
+  }
 }
 
 const rockBtn = document.querySelector(".rock");
@@ -61,6 +78,7 @@ const scissorsBtn = document.querySelector(".scissors");
 const score = document.querySelector(".score");
 const round = document.querySelector(".round");
 const picks = document.querySelector(".picks");
+const gameWinner = document.querySelector(".gameWinner");
 
 rockBtn.addEventListener("click", () => playRound("rock", getComputerChoice()));
 paperBtn.addEventListener("click", () => playRound("paper", getComputerChoice()));
