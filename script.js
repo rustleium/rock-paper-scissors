@@ -68,7 +68,7 @@ function playRound(humanChoice, computerChoice) {
 
   if(humanScore === 5 || computerScore === 5){
     declareGameWinner(humanScore === 5 ? "Human" : "Computer");
-    resetGame();
+    setTimeout(resetGame, 2000);
   }
 }
 
