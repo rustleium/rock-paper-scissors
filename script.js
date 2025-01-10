@@ -80,6 +80,20 @@ const round = document.querySelector(".round");
 const picks = document.querySelector(".picks");
 const gameWinner = document.querySelector(".gameWinner");
 
-rockBtn.addEventListener("click", () => playRound("rock", getComputerChoice()));
-paperBtn.addEventListener("click", () => playRound("paper", getComputerChoice()));
-scissorsBtn.addEventListener("click", () => playRound("scissors", getComputerChoice()));
+rockBtn.addEventListener("click", () => {
+  if(humanScore < 5 && computerScore < 5){
+    playRound("rock", getComputerChoice())
+  }
+});
+
+paperBtn.addEventListener("click", () => {
+  if(humanScore < 5 && computerScore < 5){
+    playRound("paper", getComputerChoice())
+  }
+});
+
+scissorsBtn.addEventListener("click", () => {
+  if(humanScore < 5 && computerScore < 5){
+    playRound("scissors", getComputerChoice())
+  }
+});
